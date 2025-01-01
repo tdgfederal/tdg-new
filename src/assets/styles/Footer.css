@@ -1,0 +1,25 @@
+.footer{
+    background-color: rgba(48, 33, 110, 1);
+    color: white;
+    padding: 50px 200px 20px 200px;
+}
+.footer-imgg{
+    height: 80px;
+}
+@media(max-width:992px){
+    .footer{
+        padding: 50px 30px;
+    }
+}
+@media(max-width:385px){
+    .footer-imgg{
+        height: 60px;
+    }
+    .footer{
+        text-align: center;
+        justify-content: center;
+    }
+}
+.di{
+    color: white;
+}
