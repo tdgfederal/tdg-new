@@ -109,17 +109,17 @@ const Navbar = () => {
                 </Link>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/program-project-management"}>
                       Program & Project Management
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/information-technology-cloud-solutions"}>
                       Information Technology and Cloud Solutions
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/download-capabilities"}>
                       Download Capability Statement
                     </Link>
                   </li>

@@ -339,7 +339,7 @@ const ContractVehicles = () => {
               Message
             </label>
             <br />
-            <textarea name="" placeholder="Message" id=""></textarea>
+            <textarea name="" placeholder="Message" id="" style={{border:"1px solid #641097"}}></textarea>
             <br />
             <button className="sl-inner-btn-form">Submit</button>
           </form>
