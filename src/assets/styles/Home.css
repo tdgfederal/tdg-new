@@ -54,10 +54,15 @@
   border: none;
   border-radius: 8px;
 }
+.sl-inner-btn:hover {
+  background: rgba(59, 168, 189, 1);
+  color: rgba(47, 47, 47, 1);
+}
 
 
 .industries {
   font-family: "Exo", serif;
+  color: #2f2f2f;
 }
 .industries h1 {
   font-family: "Exo", serif;

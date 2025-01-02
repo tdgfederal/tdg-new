@@ -1,0 +1,76 @@
+.contra-top{
+    padding: 100px 150px 50px 150px;
+}
+.contra-acc{
+    padding: 0 150px 100px 150px;
+}
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: #30216e;
+}
+.accordion-button{
+    background-color: #641097;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 25px 40px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.accordion-button:hover{
+    background-color: #63109739;
+    color: #2f2f2f;
+}
+.accordion-button::after {
+    flex-shrink: 0;
+    margin-left: auto;
+    content: none;
+}
+@media(max-width:992px){
+    .contra-top{
+        padding: 70px;
+    }
+}
+
+.accordion-body{
+    display: flex;
+    padding: 30px 50px;
+}
+.acc-body-img{
+    height: 250px;
+}
+@media(max-width:992px){
+    .contra-acc{
+        padding: 0 70px 100px 70px;
+    }
+}
+@media(max-width:768px){
+    .accordion-body{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .acc-body-img{
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .contra-acc{
+        padding: 0 70px 100px 70px;
+    }
+}
+@media(max-width:500px){
+    .contra-top{
+        padding: 50px 30px 30px 30px;
+    }
+    .contra-acc{
+        padding: 0 30px 100px 30px;
+    }
+}
+
+.contra-line{
+    border: 1px solid rgba(0, 0, 0, 0.388);
+    margin: 0 8% 70px 8%;
+}

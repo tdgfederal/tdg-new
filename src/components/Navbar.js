@@ -126,7 +126,7 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/blog"}>
+                <Link className="nav-link" to={"/contract-vehicles"}>
                 Contract Vehicles
                 </Link>
               </li>
