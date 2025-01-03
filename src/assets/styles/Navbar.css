@@ -73,7 +73,7 @@
   padding: 7px 25px;
 }
 .nav-button:hover {
-  background-color: #000000be;
+  background: linear-gradient(0, #30216e, #641097);
   border: none;
   color: white;
 }

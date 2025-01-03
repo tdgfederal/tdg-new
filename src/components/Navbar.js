@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/styles/Navbar.css";
 import logo from "../assets/images/logoNew.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
+import Contact from "../pages/Contact";
 
 const Navbar = () => {
   const nav = useNavigate();
+  const [cont, setCont] = useState(false);
 
   return (
     <section id="nav-tdg" className="navbar-section">
+      {cont?<Contact setCont={setCont}/>:""}
       <nav className="nav-main navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to={"/"}>
@@ -107,12 +110,18 @@ const Navbar = () => {
                 </Link>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <Link class="dropdown-item" to={"/program-project-management"}>
+                    <Link
+                      class="dropdown-item"
+                      to={"/program-project-management"}
+                    >
                       Program & Project Management
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to={"/information-technology-cloud-solutions"}>
+                    <Link
+                      class="dropdown-item"
+                      to={"/information-technology-cloud-solutions"}
+                    >
                       Information Technology and Cloud Solutions
                     </Link>
                   </li>
@@ -125,24 +134,22 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/contract-vehicles"}>
-                Contract Vehicles
+                  Contract Vehicles
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/scoop"}>
-                Scoop
+                  Scoop
                 </Link>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <button
-                className="nav-button btn"
-                type="submit"
-                onClick={() => nav("/consultation")}
-              >
-                Contact Us
-              </button>
-            </form>
+            <button
+              className="nav-button btn"
+              type="submit"
+              onClick={() => setCont(true)}
+            >
+              Contact Us
+            </button>
           </div>
         </div>
       </nav>

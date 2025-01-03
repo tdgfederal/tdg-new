@@ -9,6 +9,7 @@ const Scoop = () => {
       img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-93.png?resize=1024%2C683",
       description:
         "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
+      link: "http://www.thediallogroupllc.com/2024/12/10/devops-the-key-to-successful-cloud-implementation-in-the-federal-government/",
     },
     {
       heading:
@@ -16,6 +17,7 @@ const Scoop = () => {
       img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-92.png?resize=1024%2C683",
       description:
         "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
+      link: "http://www.thediallogroupllc.com/2024/12/09/cloud-computing-a-lifeline-for-federal-public-health-in-disaster-recovery/",
     },
   ];
   const projectBlog = [
@@ -25,6 +27,7 @@ const Scoop = () => {
       img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-92-copy.png?resize=1024%2C683",
       description:
         "In the complex landscape of federal health projects, effective risk management is essential to ensure project success, minimize potential disruptions, and protect public health.",
+      link: "http://www.thediallogroupllc.com/2024/12/10/risk-management-a-critical-component-of-federal-health-project-management/",
     },
   ];
   return (
@@ -59,7 +62,9 @@ const Scoop = () => {
                 <h4>{e.heading}</h4>
                 <img src={e.img} alt="" />
                 <p>{e.description}</p>
-                <button>Read More</button>
+                <a href={e.link}>
+                  <button>Read More</button>
+                </a>
               </div>
             </div>
           ))}
@@ -78,7 +83,9 @@ const Scoop = () => {
                   <h4>{e.heading}</h4>
                   <img src={e.img} alt="" />
                   <p>{e.description}</p>
-                  <button>Read More</button>
+                  <a href={e.link}>
+                    <button>Read More</button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -88,16 +95,19 @@ const Scoop = () => {
         <br />
         <div className="scoop-bottom">
           <div className="scoop-form">
-            <h1 style={{fontWeight:"600"}}>Send Us A Message</h1>
+            <h1 style={{ fontWeight: "600" }}>Send Us A Message</h1>
             <p>Let us know what you think</p>
             <form action="">
-              <input type="text" placeholder="Name" /><br />
-              <input className="my-3" type="email" placeholder="Email" /><br />
+              <input type="text" placeholder="Name" />
+              <br />
+              <input className="my-3" type="email" placeholder="Email" />
+              <br />
               <textarea name="" placeholder="Message" id=""></textarea>
               <button>Send</button>
             </form>
           </div>
-        </div><br />
+        </div>
+        <br />
       </div>
     </div>
   );

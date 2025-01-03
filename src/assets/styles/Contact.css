@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+
+.contact-modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.395);
+    color: red;
+    z-index: 2000;
+}
+.modal-in{
+    background-color: #30216e;
+    color: white;
+    position: relative;
+    z-index: 10000;
+    height: 100%;
+    width: 700px;
+    margin: auto;
+    padding: 50px;
+    font-family: "Exo", serif;
+    overflow-y: scroll;
+}
+.modal-in h1{
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.8rem;
+}
+.modal-in input, textarea, select{
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.contact-last-form a{
+    color: white;
+    font-size: 0.8rem;
+}
+.contact-last-form a:hover{
+    color: rgba(59, 168, 189, 1);
+}
+.cross{
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+.cross:hover{
+    color: red;
+}

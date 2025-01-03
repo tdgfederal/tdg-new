@@ -58,7 +58,10 @@
   background: rgba(59, 168, 189, 1);
   color: rgba(47, 47, 47, 1);
 }
-
+#alt-hover:hover{
+  background: rgba(59, 168, 189, 1);
+  color: rgba(47, 47, 47, 1);
+}
 
 .industries {
   font-family: "Exo", serif;
@@ -364,7 +367,7 @@
     }
 }
 .form input, textarea{
-    border:1px solid #641097;
+    border: 1px solid #641097;
     padding: 10px 12px;
     border-radius: 8px;
     margin-bottom: 10px;

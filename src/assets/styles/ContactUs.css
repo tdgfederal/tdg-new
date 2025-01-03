@@ -1,0 +1,39 @@
+.contact-box{
+    background-color: #30216e;
+    height: 250px;
+    width: 350px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 80px 0;
+}
+.contact-box a{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+}
+.contact-box a:hover{
+    color: rgba(59, 168, 189, 1);
+}
+.cont-head-last{
+    margin: 100px 100px 0 100px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+@media(max-width:500px){
+    .cont-head-last{
+        text-align: center;
+        margin: 100px 0;
+    }
+}

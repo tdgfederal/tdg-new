@@ -151,7 +151,7 @@ const Home = () => {
             <p>64% Improvement in load balancing</p>
             <p>2 Months project timeline</p>
             <button
-              className="sl-inner-btn mt-4"
+              className="sl-inner-btn mt-4" id="alt-hover"
               style={{
                 background: "white",
                 color: "black",
@@ -287,7 +287,7 @@ const Home = () => {
               Message
             </label>
             <br />
-            <textarea name="" placeholder="Message" id=""></textarea>
+            <textarea name="" placeholder="Message" id="" style={{border: "1px solid #641097"}}></textarea>
             <br />
             <button className="sl-inner-btn-form">Submit</button>
           </form>
