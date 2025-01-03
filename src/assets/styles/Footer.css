@@ -23,3 +23,10 @@
 .di{
     color: white;
 }
+.anch-h{
+    color: white;
+    cursor: pointer;
+}
+.anch-h:hover{
+    color: rgba(59, 168, 189, 1);
+}

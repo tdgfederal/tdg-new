@@ -164,7 +164,9 @@ const Footer = () => {
         className="foot-bottom"
         style={{ textAlign: "center", padding: "40px" }}
       >
-        <div
+        <a
+          href="https://www.linkedin.com/company/the-diallo-group-llc/"
+          target="_blank"
           style={{
             fontSize: "1rem",
             backgroundColor: "white",
@@ -179,28 +181,43 @@ const Footer = () => {
           }}
         >
           <TfiLinkedin />
-        </div>
+        </a>
         <br />
         <p>
           Inquiries:{" "}
           <span className="fw-bold" style={{ textDecoration: "underline" }}>
-            info@thediallogroupllc.com
+            <a className="anch-h" href="mailto:info@thediallogroupllc.com">
+              info@thediallogroupllc.com
+            </a>
           </span>{" "}
           | Business Dev:{" "}
           <span className="fw-bold" style={{ textDecoration: "underline" }}>
-            bd@thediallogroupllc.com
+            <a className="anch-h" href="mailto:bd@thediallogroupllc.com">
+              bd@thediallogroupllc.com
+            </a>
           </span>{" "}
           | Telephone:{" "}
           <span className="fw-bold" style={{ textDecoration: "underline" }}>
-            571-315-2073
+            <a href="571-315-2073" className="anch-h">
+              571-315-2073
+            </a>
           </span>
-        </p><br />
-        <div className="d-flex align-items-center justify-content-center" style={{gap:"50px"}}>
-            <div>Privacy Policy</div>
-            <div style={{height:"40px", background:"white", width:'1px'}}></div>
-            <div>Cookie Policy</div>
-        </div><br />
-        <p style={{color:"#FFFFFF50", marginBottom:"-20px"}}>Copyright © The Diallo Group, LLC | 2024 | All Rights Reserved.</p>
+        </p>
+        <br />
+        <div
+          className="d-flex align-items-center justify-content-center"
+          style={{ gap: "50px" }}
+        >
+          <div className="anch-h">Privacy Policy</div>
+          <div
+            style={{ height: "40px", background: "white", width: "1px" }}
+          ></div>
+          <div className="anch-h">Cookie Policy</div>
+        </div>
+        <br />
+        <p style={{ color: "#FFFFFF50", marginBottom: "-20px" }}>
+          Copyright © The Diallo Group, LLC | 2024 | All Rights Reserved.
+        </p>
       </div>
     </div>
   );

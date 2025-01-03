@@ -88,6 +88,10 @@
     /* border: none; */
     font-size: 0.95rem;
 }
+.dropdown-item:hover{
+  background-color: #641097;
+  color: white;
+}
 .dropdown-menu .dropdown-item{
     padding: 10px 20px;
 }
