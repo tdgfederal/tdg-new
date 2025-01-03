@@ -35,7 +35,7 @@ const Scoop = () => {
       <div className="scoop-top industries row" style={{ margin: "0" }}>
         <div className="col-lg-6 col-md-6">
           <p
-            id="bt"
+            id="bt-scoop"
             style={{ marginBottom: "-2px", borderTop: "1px solid white" }}
           >
             Scoop:

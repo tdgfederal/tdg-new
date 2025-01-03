@@ -1,7 +1,9 @@
 import React from "react";
 import "../assets/styles/PublicSector.css";
+import { useNavigate } from "react-router-dom";
 
 const Commercial = () => {
+  const nav = useNavigate();
   return (
     <div>
       <div className="industries">
@@ -33,6 +35,7 @@ const Commercial = () => {
                     fontSize: "0.95rem",
                     width: "100%",
                   }}
+                  onClick={()=>nav("/download-capabilities")}
                 >
                   Capability
                 </button>
@@ -125,7 +128,7 @@ const Commercial = () => {
             Ready to learn more about how TDG can help your agency achieve its
             goals? Contact us today to schedule a consultation.
           </p>
-          <button className="sl-inner-btn" style={{ fontSize: "1rem" }}>
+          <button className="sl-inner-btn" style={{ fontSize: "1rem" }} onClick={()=>nav("/contact-us")}>
             Contact Us
           </button>
         </div>

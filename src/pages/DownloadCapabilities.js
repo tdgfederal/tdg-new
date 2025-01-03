@@ -127,7 +127,7 @@ const DownloadCapabilities = () => {
               style={{ border: "1px solid #641097" }}
             ></textarea>
             <br />
-            <button className="sl-inner-btn-form">Submit</button>
+            <button className="sl-inner-btn-form" id="bt-n">Submit</button>
           </form>
         </div>
       </div>

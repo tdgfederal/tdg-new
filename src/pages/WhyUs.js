@@ -226,17 +226,21 @@ const WhyUs = () => {
             <p>33% Reduction in RDS instance</p>
             <p>64% Improvement in load balancing</p>
             <p>2 Months project timeline</p>
-            <button
-              className="sl-inner-btn mt-4"
-              style={{
-                background: "white",
-                color: "black",
-                fontSize: "1rem",
-                padding: "10px 80px",
-              }}
+            <a
+              href="https://www.thediallogroupllc.com/from-legacy-to-leading-edge-a-federal-it-success-story/"
+              target="_blank"
             >
-              Learn More
-            </button>
+              <button
+                className="sl-inner-btn mt-4"
+                id="bt"
+                style={{
+                  fontSize: "1rem",
+                  padding: "10px 80px",
+                }}
+              >
+                Learn More
+              </button>
+            </a>
           </div>
           <div
             className="cs-1"
@@ -257,17 +261,21 @@ const WhyUs = () => {
             <p>50% More web traffic handled</p>
             <p>20% Reduction in security incidents</p>
             <p>30% Faster feature implementation</p>
-            <button
-              className="sl-inner-btn mt-4"
-              style={{
-                background: "white",
-                color: "black",
-                fontSize: "1rem",
-                padding: "10px 80px",
-              }}
+            <a
+              href="https://www.thediallogroupllc.com/case-study-2-transforming-federal-healthcare-architecture-a-cloud-migration-success-story/"
+              target="_blank"
             >
-              Learn More
-            </button>
+              <button
+                className="sl-inner-btn mt-4"
+                id="bt"
+                style={{
+                  fontSize: "1rem",
+                  padding: "10px 80px",
+                }}
+              >
+                Learn More
+              </button>
+            </a>
           </div>
         </div>
         <br />

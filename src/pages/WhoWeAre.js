@@ -3,8 +3,10 @@ import "../assets/styles/PublicSector.css";
 import l1 from "../assets/images/1.png";
 import l2 from "../assets/images/2.png";
 import l3 from "../assets/images/7.png";
+import {useNavigate} from "react-router-dom"
 
 const WhoWeAre = () => {
+  const nav = useNavigate();
   const services = [
     {
       logo: l1,
@@ -107,7 +109,7 @@ const WhoWeAre = () => {
             discuss your challenges and explore how we can help you achieve your
             goals.
           </p>
-          <button className="sl-inner-btn" style={{ fontSize: "1rem" }}>
+          <button className="sl-inner-btn" style={{ fontSize: "1rem" }} onClick={()=>nav("/contact-us")}>
             Contact Us
           </button>
         </div>

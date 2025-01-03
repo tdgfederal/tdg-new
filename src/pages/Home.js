@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../assets/styles/Home.css";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const nav = useNavigate();
   const images = [
     "http://www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-44-2-1.png",
     "http://www.thediallogroupllc.com/wp-content/uploads/2024/11/Property-1Frame-213.png",
@@ -38,15 +40,26 @@ const Home = () => {
             that not only solve your problems but also exceed your expectations.
             Let’s work together to turn your challenges into opportunities.
           </p>
-          <button className="sl-inner-btn">Why Us</button>
+          <button className="sl-inner-btn" onClick={() => nav("/why-us")}>
+            Why Us
+          </button>
         </div>
       </div>
       <div className="industries">
         <h1>INDUSTRIES</h1>
         <div className="three-ind">
-          <div className="each-ind">Public Sector</div>
-          <div className="each-ind">Commercial</div>
-          <div className="each-ind">Health</div>
+          <div className="each-ind">
+            <div className="initial-one">Public Sector</div>
+            <button className="later-one" onClick={()=>nav("/public-sector")}>Learn more</button>
+          </div>
+          <div className="each-ind">
+            <div className="initial-one">Commercial</div>
+            <button className="later-one" onClick={()=>nav("/commercial")}>Learn more</button>
+          </div>
+          <div className="each-ind">
+            <div className="initial-one">Health</div>
+            <button className="later-one" onClick={()=>nav("/health")}>Learn more</button>
+          </div>
         </div>
         <div className="val">
           <div className="val-h">
@@ -87,6 +100,7 @@ const Home = () => {
             <button
               className="sl-inner-btn"
               style={{ padding: "7px 20px", fontSize: "0.95rem" }}
+              onClick={() => nav("/program-project-management")}
             >
               Learn More
             </button>
@@ -114,6 +128,7 @@ const Home = () => {
             <button
               className="sl-inner-btn"
               style={{ padding: "7px 20px", fontSize: "0.95rem" }}
+              onClick={() => nav("/information-technology-cloud-solutions")}
             >
               Learn More
             </button>
@@ -150,17 +165,21 @@ const Home = () => {
             <p>33% Reduction in RDS instance</p>
             <p>64% Improvement in load balancing</p>
             <p>2 Months project timeline</p>
-            <button
-              className="sl-inner-btn mt-4" id="alt-hover"
-              style={{
-                background: "white",
-                color: "black",
-                fontSize: "1rem",
-                padding: "10px 80px",
-              }}
+            <a
+              href="https://www.thediallogroupllc.com/from-legacy-to-leading-edge-a-federal-it-success-story/"
+              target="_blank"
             >
-              Learn More
-            </button>
+              <button
+                className="sl-inner-btn mt-4"
+                id="bt"
+                style={{
+                  fontSize: "1rem",
+                  padding: "10px 80px",
+                }}
+              >
+                Learn More
+              </button>
+            </a>
           </div>
           <div
             className="cs-1"
@@ -181,17 +200,21 @@ const Home = () => {
             <p>50% More web traffic handled</p>
             <p>20% Reduction in security incidents</p>
             <p>30% Faster feature implementation</p>
-            <button
-              className="sl-inner-btn mt-4"
-              style={{
-                background: "white",
-                color: "black",
-                fontSize: "1rem",
-                padding: "10px 80px",
-              }}
+            <a
+              href="https://www.thediallogroupllc.com/case-study-2-transforming-federal-healthcare-architecture-a-cloud-migration-success-story/"
+              target="_blank"
             >
-              Learn More
-            </button>
+              <button
+                className="sl-inner-btn mt-4"
+                id="bt"
+                style={{
+                  fontSize: "1rem",
+                  padding: "10px 80px",
+                }}
+              >
+                Learn More
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -287,9 +310,16 @@ const Home = () => {
               Message
             </label>
             <br />
-            <textarea name="" placeholder="Message" id="" style={{border: "1px solid #641097"}}></textarea>
+            <textarea
+              name=""
+              placeholder="Message"
+              id=""
+              style={{ border: "1px solid #641097" }}
+            ></textarea>
             <br />
-            <button className="sl-inner-btn-form">Submit</button>
+            <button className="sl-inner-btn-form" id="bt-n">
+              Submit
+            </button>
           </form>
         </div>
       </div>
