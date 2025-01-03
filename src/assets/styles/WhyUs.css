@@ -1,0 +1,19 @@
+.each-service-wu{
+    height: 250px;
+}
+.each-service-wu-img{
+    height:90px;
+}
+@media(max-width:1200px){
+    .each-service-wu{
+        height: 100%;
+    }
+    .each-service-wu-img{
+        height: 70px;
+    }
+}
+@media(max-width:450px){
+    .each-service-wu-img{
+        height: 50px;
+    }
+}

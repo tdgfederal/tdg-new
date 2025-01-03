@@ -13,6 +13,10 @@ import Scoop from "./pages/Scoop";
 import PublicSector from "./pages/PublicSector";
 import Commercial from "./pages/Commercial";
 import Health from "./pages/Health";
+import WhoWeAre from "./pages/WhoWeAre";
+import Leadership from "./pages/Leadership";
+import WhyUs from "./pages/WhyUs";
+import JoinTDG from "./pages/JoinTDG";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -37,6 +41,10 @@ function App() {
         <Route path="/public-sector" element={<PublicSector/>}/>
         <Route path="/commercial" element={<Commercial/>}/>
         <Route path="/health" element={<Health/>}/>
+        <Route path="/who-we-are" element={<WhoWeAre/>}/>
+        <Route path="/leadership" element={<Leadership/>}/>
+        <Route path="/why-us" element={<WhyUs/>}/>
+        <Route path="/join-tdg" element={<JoinTDG/>}/>
       </Routes>
       <Footer/>
     </div>

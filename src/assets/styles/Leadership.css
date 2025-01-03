@@ -1,0 +1,28 @@
+.limg {
+  height: 350px;
+  width: auto;
+}
+.limgt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+@media(max-width:988px){
+    .limg{
+        height: 250px;
+    }
+}
+@media(max-width:768px){
+    .limgt{
+        flex-direction: column;
+    }
+    .limg{
+        height: 350px;
+    }
+}
+@media(max-width:600px){
+    .limg{
+        height: 300px;
+    }
+}

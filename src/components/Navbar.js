@@ -46,22 +46,22 @@ const Navbar = () => {
                 </div>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/who-we-are"}>
                       Who We Are
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/leadership"}>
                       Leadership
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/why-us"}>
                       Why Us
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/join-tdg"}>
                       Join TDG
                     </Link>
                   </li>
