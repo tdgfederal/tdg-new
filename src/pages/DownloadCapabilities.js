@@ -1,8 +1,5 @@
 import React from "react";
 import "../assets/styles/DownloadCapabilities.css";
-import l1 from "../assets/images/aws.png";
-import l2 from "../assets/images/azure.png";
-import l3 from "../assets/images/gc.png";
 
 const DownloadCapabilities = () => {
   return (

@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "../assets/styles/Navbar.css";
-import { GoArrowUpRight } from "react-icons/go";
 import logo from "../assets/images/logoNew.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
-import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
   const nav = useNavigate();
@@ -81,17 +79,17 @@ const Navbar = () => {
                 </Link>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/public-sector"}>
                       Public Sector
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/commercial"}>
                       Commercial
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to={"/"}>
+                    <Link class="dropdown-item" to={"/health"}>
                       Health
                     </Link>
                   </li>

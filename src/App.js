@@ -10,6 +10,9 @@ import ProgramProjectManagement from "./pages/ProgramProjectManagement";
 import InformationTechnologyCloudSolutions from "./pages/InformationTechnologyCloudSolutions";
 import DownloadCapabilities from "./pages/DownloadCapabilities";
 import Scoop from "./pages/Scoop";
+import PublicSector from "./pages/PublicSector";
+import Commercial from "./pages/Commercial";
+import Health from "./pages/Health";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -31,6 +34,9 @@ function App() {
         <Route path="/program-project-management" element={<ProgramProjectManagement/>}/>
         <Route path="/information-technology-cloud-solutions" element={<InformationTechnologyCloudSolutions/>}/>
         <Route path="/download-capabilities" element={<DownloadCapabilities/>}/>
+        <Route path="/public-sector" element={<PublicSector/>}/>
+        <Route path="/commercial" element={<Commercial/>}/>
+        <Route path="/health" element={<Health/>}/>
       </Routes>
       <Footer/>
     </div>
