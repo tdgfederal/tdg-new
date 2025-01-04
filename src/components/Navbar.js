@@ -176,9 +176,9 @@ const Navbar = () => {
       ) : (
         ""
       )}
-      <nav className="nav-main navbar navbar-expand-lg">
+      <nav className="nav-main navbar navbar-expand-lg py-5">
         <div className="container-fluid">
-          <Link className="navbar-brand" to={"/"}>
+          <Link className="navbar-brand" style={{}} to={"/"}>
             <img className="logo-navbar-lg" src={logo} alt="" />
           </Link>
           <button
@@ -199,7 +199,7 @@ const Navbar = () => {
             className={`collapse navbar-collapse ${click ? "show" : ""}`}
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav mx-auto">
+            <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link className="nav-link" to={"/"}>
                   Home
@@ -312,7 +312,7 @@ const Navbar = () => {
               </li>
             </ul>
             <button
-              className="nav-button btn"
+              className="nav-button btn mx-5"
               type="submit"
               onClick={() => setCont(true)}
             >

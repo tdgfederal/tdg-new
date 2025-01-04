@@ -15,7 +15,7 @@ const PublicSector = () => {
             src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Public-Sector.png?w=672s"
             alt=""
           />
-          <div className="cont-c1">
+          <div className="cont-c1 mt-3">
             <h3 style={{ fontWeight: "600" }}>
               Partnering with the Public Sector to Drive Positive Change
             </h3>
@@ -55,7 +55,7 @@ const PublicSector = () => {
               </div>
             </div>
           </div>
-          <div className="line"></div>
+          <div className="line" style={{bottom:"30px"}}></div>
         </div>
         <br />
         <br />

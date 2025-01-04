@@ -14,11 +14,13 @@
   border-bottom: 1px solid black;
 }
 .logo-navbar-lg {
-  height: 55px;
+  height: 65px;
+  margin-left: 50px;
 }
 @media (max-width: 992px) {
   .logo-navbar-lg {
     height: 50px;
+    margin-left: 0;
   }
 }
 .nav-ser {
@@ -55,7 +57,7 @@
   margin: 0 10px;
   text-transform: capitalize;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 .nav-link:hover {
   font-weight: bold;
@@ -67,7 +69,7 @@
   background-color: rgba(59, 168, 189, 1);
   border: none;
   color: rgba(47, 47, 47, 1);
-  font-size: 0.85rem;
+  font-size: 1rem;
   border-radius: 8px;
   font-family: Helvetica;
   padding: 7px 25px;

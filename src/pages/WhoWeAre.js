@@ -75,9 +75,9 @@ const WhoWeAre = () => {
                 <div
                   className="each-service"
                   key={i}
-                  style={{ height: "350px" }}
+                  style={{ height: "100%" }}
                 >
-                  <img src={e.logo} height={50} alt="" />
+                  <img src={e.logo} height={90} alt="" />
                   <div style={{ borderLeft: "2px solid #30216e", paddingLeft:"15px" }}>
                     <p
                       className="mt-4"

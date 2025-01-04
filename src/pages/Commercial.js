@@ -16,7 +16,7 @@ const Commercial = () => {
             src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Commercial.png?w=672&ssl=1"
             alt=""
           />
-          <div className="cont-c1">
+          <div className="cont-c1 mt-5">
             <h3 style={{ fontWeight: "600" }}>
               Partnering with Businesses to Drive Success
             </h3>
@@ -42,7 +42,7 @@ const Commercial = () => {
               </div>
             </div>
           </div>
-          <div className="line"></div>
+          <div className="line" style={{bottom:"30px"}}></div>
         </div>
         <br />
         <br />

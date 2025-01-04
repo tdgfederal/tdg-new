@@ -16,7 +16,7 @@ const Health = () => {
             src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Healthcare.png?w=672"
             alt=""
           />
-          <div className="cont-c1">
+          <div className="cont-c1 mt-4">
             <h3 style={{ fontWeight: "600" }}>
               Driving Positive Change in Healthcare
             </h3>
@@ -43,7 +43,7 @@ const Health = () => {
               </div>
             </div>
           </div>
-          <div className="line"></div>
+          <div className="line" style={{bottom:"30px"}}></div>
         </div>
         <br />
         <br />
