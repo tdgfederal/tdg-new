@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "../assets/styles/Navbar.css";
 import logo from "../assets/images/logoNew.png";
-import logoCol from "../assets/images/flogo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Contact from "../pages/Contact";
 
 const Navbar = () => {
-  const nav = useNavigate();
   const [cont, setCont] = useState(false);
   const [click, setClick] = useState(false);
 
