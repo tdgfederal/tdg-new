@@ -1,33 +1,31 @@
 import "../assets/styles/Footer.css";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import "../assets/styles/Navbar.css";
-import { GoArrowUpRight } from "react-icons/go";
 import logo from "../assets/images/flogo.png";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { Link, useNavigate } from "react-router-dom";
-import { IoIosArrowDown } from "react-icons/io";
+import { Link, useLocation } from "react-router-dom";
 import { TfiLinkedin } from "react-icons/tfi";
 
 const Footer = () => {
-  const nav = useNavigate();
+  const loc = useLocation();
+  const path = loc.pathname;
 
   return (
     <div className="footer">
       <section id="nav-tdg" className="navbar-section">
         <nav
-          className="nav-main navbar navbar-expand-lg"
+          className="nav-main navbar navbar-expand-sm" id="footer-nav-ex"
           style={{ borderBottom: "1px solid #FFFFFF30", paddingBottom: "50px" }}
         >
           <div className="container-fluid">
             <Link className="navbar-brand" to={"/"}>
               <img className="footer-imgg" src={logo} alt="" />
             </Link>
-            <div>
-              <ul className="navbar-nav mx-auto">
+            <div className="footer-ww">
+              <ul className="navbar-nav mx-auto" style={{flexWrap:"wrap"}}>
                 <li className="nav-item">
                   <Link
                     className="nav-link"
-                    style={{ color: "white" }}
+                    style={{ color: path==="/"?"rgba(59, 168, 189, 1)":"white", borderBottom: path==="/"?"2.5px solid rgba(59, 168, 189, 1)":"" }}
                     to={"/"}
                   >
                     Home
@@ -47,20 +45,20 @@ const Footer = () => {
                   <ul
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdown"
-                    style={{ backgroundColor: "#641097", color: "white" }}
+                    style={{ backgroundColor: "", color: "white" }}
                   >
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/who-we-are"}>
                         Who We Are
                       </Link>
                     </li>
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/leadership"}>
                         Leadership
                       </Link>
                     </li>
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/why-us"}>
                         Why Us
                       </Link>
                     </li>
@@ -85,20 +83,20 @@ const Footer = () => {
                   <ul
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdown"
-                    style={{ backgroundColor: "#641097", color: "white" }}
+                    
                   >
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/public-sector"}>
                         Public Sector
                       </Link>
                     </li>
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/commercial"}>
                         Commercial
                       </Link>
                     </li>
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/health"}>
                         Health
                       </Link>
                     </li>
@@ -118,20 +116,20 @@ const Footer = () => {
                   <ul
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdown"
-                    style={{ backgroundColor: "#641097", color: "white" }}
+                    
                   >
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/program-project-management"}>
                         Program & Project Management
                       </Link>
                     </li>
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/information-technology-cloud-solutions"}>
                         Information Technology and Cloud Solutions
                       </Link>
                     </li>
                     <li>
-                      <Link class="dropdown-item di" to={"/"}>
+                      <Link class="dropdown-item di" to={"/download-capabilities"}>
                         Download Capability Statement
                       </Link>
                     </li>
@@ -140,8 +138,8 @@ const Footer = () => {
                 <li className="nav-item">
                   <Link
                     className="nav-link"
-                    style={{ color: "white" }}
-                    to={"/blog"}
+                    style={{ color: path==="/contract-vehicles"?"rgba(59, 168, 189, 1)":"white", borderBottom: path==="/contract-vehicles"?"2.5px solid rgba(59, 168, 189, 1)":"" }}
+                    to={"/contract-vehicles"}
                   >
                     Contract Vehicles
                   </Link>
@@ -149,8 +147,8 @@ const Footer = () => {
                 <li className="nav-item">
                   <Link
                     className="nav-link"
-                    style={{ color: "white" }}
-                    to={"/career"}
+                    style={{ color: path==="/scoop"?"rgba(59, 168, 189, 1)":"white", borderBottom: path==="/scoop"?"2.5px solid rgba(59, 168, 189, 1)":"" }}
+                    to={"/scoop"}
                   >
                     Scoop
                   </Link>
