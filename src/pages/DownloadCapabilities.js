@@ -1,7 +1,16 @@
 import React from "react";
 import "../assets/styles/DownloadCapabilities.css";
+import file from "../assets/download (5).htm";
 
 const DownloadCapabilities = () => {
+  const handleClick = () => {
+    const link = document.createElement("a");
+    link.download = "file";
+
+    link.href = file;
+
+    link.click();
+  };
   return (
     <div>
       <div className="contra-top industries">
@@ -40,7 +49,7 @@ const DownloadCapabilities = () => {
               >
                 CAPABILITY STATEMENT
               </h2>
-              <button className="sl-inner-btn my-5" style={{fontSize:"1rem"}}>Download</button>
+              <button className="sl-inner-btn my-5" style={{fontSize:"1rem"}} onClick={handleClick}>Download</button>
             </div>
           </div>
         </div>
