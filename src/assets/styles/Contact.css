@@ -20,6 +20,11 @@
     font-family: "Exo", serif;
     overflow-y: scroll;
 }
+@media(max-width:768px){
+    .modal-in{
+        width: 100%;
+    }
+}
 .modal-in h1{
     font-weight: 700;
     text-align: center;
