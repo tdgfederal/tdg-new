@@ -1,10 +1,42 @@
-import React from "react";
+import React, {useState} from "react";
 import "../assets/styles/InformationTechnologyCloudSolutions.css";
 import l1 from "../assets/images/aws.png";
 import l2 from "../assets/images/azure.png";
 import l3 from "../assets/images/gc.png";
 
 const InformationTechnologyCloudSolutions = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    organization: "",
+    interest: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://tdg-new-backend.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+      alert("Failed! Try again.");
+    }
+  };
   return (
     <div>
       <div className="contra-top industries">
@@ -249,52 +281,70 @@ const InformationTechnologyCloudSolutions = () => {
               style={{ width: "100%", borderRadius: "12px" }}
             />
           </div>
-          <form className="form col-lg-6 col-md-6" action="">
+          <form className="form col-lg-6 col-md-6" onSubmit={handleSubmit}>
             <label style={{ fontWeight: "600" }} htmlFor="">
               Name <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="text" placeholder="Name" />
+            <input
+              className="in-text"
+              type="text"
+              placeholder="Name"
+              name="name"
+              onChange={handleChange}
+            />
             <br />
             <label style={{ fontWeight: "600" }} htmlFor="">
               Email <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="email" placeholder="Email" />
+            <input
+              className="in-text"
+              type="email"
+              placeholder="Email"
+              name="email"
+              onChange={handleChange}
+            />
             <br />
             <label style={{ fontWeight: "600" }} htmlFor="">
               Organization <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="text" placeholder="" />
+            <input
+              className="in-text"
+              type="text"
+              placeholder=""
+              name="organization"
+              onChange={handleChange}
+            />
             <br />
             <div style={{ fontWeight: "600", marginBottom: "-20px" }}>
               Area of interest
             </div>
             <br />
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 General Information
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Partnership Opportunities
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Careers
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Others
@@ -305,13 +355,16 @@ const InformationTechnologyCloudSolutions = () => {
             </label>
             <br />
             <textarea
-              name=""
+              name="message"
+              onChange={handleChange}
               placeholder="Message"
               id=""
               style={{ border: "1px solid #641097" }}
             ></textarea>
             <br />
-            <button className="sl-inner-btn-form" id="bt-n">Submit</button>
+            <button className="sl-inner-btn-form" id="bt-n">
+              Submit
+            </button>
           </form>
         </div>
       </div>

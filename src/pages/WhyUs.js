@@ -2,8 +2,17 @@ import React from "react";
 import "../assets/styles/WhyUs.css";
 import l1 from "../assets/images/8.png";
 import { FaDownload } from "react-icons/fa6";
+import file from "../assets/qms.0520-Quality-Policy-_updated.pdf";
 
 const WhyUs = () => {
+    const handleClick = () => {
+      const link = document.createElement("a");
+      link.download = "qms.0520-Quality-Policy-_updated";
+  
+      link.href = file;
+  
+      link.click();
+    };
   const services = [
     {
       logo: l1,
@@ -142,13 +151,14 @@ const WhyUs = () => {
                 alt=""
               />
               <div
-                className="fw-bold mt-4 mb-3"
+                className="fw-bold mt-4 mb-3 d-flex"
                 style={{ width: "250px", lineHeight: "15px" }}
+                onClick={handleClick}
               >
-                <FaDownload />{" "}
-                <a href="/" target="_blank" style={{ color: "black" }}>
+                <FaDownload style={{marginLeft:"20px"}}/>{" "}
+                <div style={{ color: "black", textDecoration:"underline", cursor:'pointer' }}>
                   Download Our Certificate of Accreditation
-                </a>
+                </div>
               </div>
             </div>
             <div style={{ textAlign: "center" }}>

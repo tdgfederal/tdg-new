@@ -17,6 +17,56 @@ const Home = () => {
   }, [images.length]);
   const imageUrl =
     "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Case-study-1.png?fit=399%2C496";
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    organization: "",
+    interest: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://tdg-new-backend.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+      alert("Failed! Try again.");
+    }
+  };
+  const cloudBlog = [
+    {
+      heading:
+        "DevOps: The Key to Successful Cloud Implementation in the Federal Government",
+      img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-93.png?resize=1024%2C683",
+      description:
+        "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
+      link: "http://www.thediallogroupllc.com/2024/12/10/devops-the-key-to-successful-cloud-implementation-in-the-federal-government/",
+    },
+    {
+      heading:
+        "DevOps: The Key to Successful Cloud Implementation in the Federal Government",
+      img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-92.png?resize=1024%2C683",
+      description:
+        "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
+      link: "http://www.thediallogroupllc.com/2024/12/09/cloud-computing-a-lifeline-for-federal-public-health-in-disaster-recovery/",
+    },
+  ];
   return (
     <div>
       <div
@@ -50,15 +100,21 @@ const Home = () => {
         <div className="three-ind">
           <div className="each-ind">
             <div className="initial-one">Public Sector</div>
-            <button className="later-one" onClick={()=>nav("/public-sector")}>Learn more</button>
+            <button className="later-one" onClick={() => nav("/public-sector")}>
+              Learn more
+            </button>
           </div>
           <div className="each-ind">
             <div className="initial-one">Commercial</div>
-            <button className="later-one" onClick={()=>nav("/commercial")}>Learn more</button>
+            <button className="later-one" onClick={() => nav("/commercial")}>
+              Learn more
+            </button>
           </div>
           <div className="each-ind">
             <div className="initial-one">Health</div>
-            <button className="later-one" onClick={()=>nav("/health")}>Learn more</button>
+            <button className="later-one" onClick={() => nav("/health")}>
+              Learn more
+            </button>
           </div>
         </div>
         <div className="val">
@@ -220,6 +276,44 @@ const Home = () => {
       </div>
       <br />
       <br />
+      <div className="industries">
+      <h1>BLOGS</h1>
+        {/* <div className="blogs-head">
+          <h2>Cloud Series Blogs</h2>
+          <div className="blog-line"></div>
+        </div> */}
+        <div className="blogs row" style={{ margin: "0" }}>
+          {cloudBlog.map((e, i) => (
+            <div className="col-lg-4 col-md-6 mx-auto" key={i}>
+              <div className="each-blog">
+                <h4>{e.heading}</h4>
+                <img src={e.img} alt="" />
+                <p>{e.description}</p>
+                <a href={e.link}>
+                  <button>Read More</button>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+        <br />
+        <br />
+        <div className="scoop-bottom">
+          <div className="scoop-form">
+            <h1 style={{ fontWeight: "600" }}>Send Us A Message</h1>
+            <p>Let us know what you think</p>
+            <form onSubmit={handleSubmit}>
+              <input type="text" placeholder="Name" name="name"  onChange={handleChange}/>
+              <br />
+              <input className="my-3" type="email" placeholder="Email" name="email"  onChange={handleChange}/>
+              <br />
+              <textarea name="message" placeholder="Message" id="" onChange={handleChange}></textarea>
+              <button>Send</button>
+            </form>
+          </div>
+        </div>
+        <br />
+      </div><br /><br />
       <div className="industries mx-5" style={{ textAlign: "center" }}>
         <h1 id="testi">TESTIMONIALS</h1>
         <div style={{ fontStyle: "italic" }}>
@@ -255,52 +349,70 @@ const Home = () => {
               Get in contact with us today.
             </p>
           </div>
-          <form className="form col-lg-6 col-md-6" action="">
+          <form className="form col-lg-6 col-md-6" onSubmit={handleSubmit}>
             <label style={{ fontWeight: "600" }} htmlFor="">
               Name <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="text" placeholder="Name" />
+            <input
+              className="in-text"
+              type="text"
+              placeholder="Name"
+              name="name"
+              onChange={handleChange}
+            />
             <br />
             <label style={{ fontWeight: "600" }} htmlFor="">
               Email <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="email" placeholder="Email" />
+            <input
+              className="in-text"
+              type="email"
+              placeholder="Email"
+              name="email"
+              onChange={handleChange}
+            />
             <br />
             <label style={{ fontWeight: "600" }} htmlFor="">
               Organization <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="text" placeholder="" />
+            <input
+              className="in-text"
+              type="text"
+              placeholder=""
+              name="organization"
+              onChange={handleChange}
+            />
             <br />
             <div style={{ fontWeight: "600", marginBottom: "-20px" }}>
               Area of interest
             </div>
             <br />
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 General Information
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Partnership Opportunities
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Careers
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Others
@@ -311,7 +423,8 @@ const Home = () => {
             </label>
             <br />
             <textarea
-              name=""
+              name="message"
+              onChange={handleChange}
               placeholder="Message"
               id=""
               style={{ border: "1px solid #641097" }}

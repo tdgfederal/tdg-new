@@ -1,9 +1,41 @@
-import React from "react";
+import React, {useState} from "react";
 import "../assets/styles/ContactUs.css";
 import { LuPhone } from "react-icons/lu";
 import { GrMailOption } from "react-icons/gr";
 import { HiOutlineBriefcase } from "react-icons/hi";
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    organization: "",
+    interest: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://tdg-new-backend.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+      alert("Failed! Try again.");
+    }
+  };
   return (
     <div>
       <div className="industries">
@@ -49,52 +81,70 @@ const ContactUs = () => {
             Do not hesitate to contact us if you have any questions, recommendations, special requests, or would like more information about our products and services. We appreciate your feedback and inquiries.
             </p>
           </div>
-          <form className="form col-lg-7 mx-auto" action="">
+          <form className="form col-lg-6 col-md-6 mx-auto" onSubmit={handleSubmit}>
             <label style={{ fontWeight: "600" }} htmlFor="">
               Name <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="text" placeholder="Name" />
+            <input
+              className="in-text"
+              type="text"
+              placeholder="Name"
+              name="name"
+              onChange={handleChange}
+            />
             <br />
             <label style={{ fontWeight: "600" }} htmlFor="">
               Email <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="email" placeholder="Email" />
+            <input
+              className="in-text"
+              type="email"
+              placeholder="Email"
+              name="email"
+              onChange={handleChange}
+            />
             <br />
             <label style={{ fontWeight: "600" }} htmlFor="">
               Organization <span style={{ color: "red" }}>*</span>
             </label>
             <br />
-            <input className="in-text" type="text" placeholder="" />
+            <input
+              className="in-text"
+              type="text"
+              placeholder=""
+              name="organization"
+              onChange={handleChange}
+            />
             <br />
             <div style={{ fontWeight: "600", marginBottom: "-20px" }}>
               Area of interest
             </div>
             <br />
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 General Information
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Partnership Opportunities
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Careers
               </label>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-              <input type="radio" name="interest" />
+              <input type="radio" name="interest" onChange={handleChange} />
               <label htmlFor="" style={{ fontWeight: "500" }}>
                 {" "}
                 Others
@@ -104,9 +154,17 @@ const ContactUs = () => {
               Message
             </label>
             <br />
-            <textarea name="" placeholder="Message" id="" style={{border: "1px solid #641097"}}></textarea>
+            <textarea
+              name="message"
+              onChange={handleChange}
+              placeholder="Message"
+              id=""
+              style={{ border: "1px solid #641097" }}
+            ></textarea>
             <br />
-            <button className="sl-inner-btn-form">Submit</button>
+            <button className="sl-inner-btn-form" id="bt-n">
+              Submit
+            </button>
           </form>
         </div>
       </div>

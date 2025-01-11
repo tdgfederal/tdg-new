@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../assets/styles/Scoop.css";
 
 const Scoop = () => {
@@ -30,6 +30,38 @@ const Scoop = () => {
       link: "http://www.thediallogroupllc.com/2024/12/10/risk-management-a-critical-component-of-federal-health-project-management/",
     },
   ];
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    organization:".",
+    interest:".",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://tdg-new-backend.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+      alert("Failed! Try again.");
+    }
+  };
   return (
     <div>
       <div className="scoop-top industries row" style={{ margin: "0" }}>
@@ -97,12 +129,12 @@ const Scoop = () => {
           <div className="scoop-form">
             <h1 style={{ fontWeight: "600" }}>Send Us A Message</h1>
             <p>Let us know what you think</p>
-            <form action="">
-              <input type="text" placeholder="Name" />
+            <form onSubmit={handleSubmit}>
+              <input type="text" placeholder="Name" name="name"  onChange={handleChange}/>
               <br />
-              <input className="my-3" type="email" placeholder="Email" />
+              <input className="my-3" type="email" placeholder="Email" name="email"  onChange={handleChange}/>
               <br />
-              <textarea name="" placeholder="Message" id=""></textarea>
+              <textarea name="message" placeholder="Message" id="" onChange={handleChange}></textarea>
               <button>Send</button>
             </form>
           </div>
