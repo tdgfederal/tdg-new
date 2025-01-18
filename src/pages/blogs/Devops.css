@@ -1,0 +1,82 @@
+.blog-top {
+  background-image: url("https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-93.png?resize=1024%2C683");
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+.blog-top-text {
+  color: white;
+  font-size: 2.5rem;
+  background-color: rgba(31, 38, 135, 0.37);
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 70px 40px;
+  width: 35rem;
+  margin-left: 180px;
+}
+@media (max-width: 992px) {
+  .blog-top-text {
+    margin-left: 0;
+  }
+  .blog-top {
+    justify-content: center;
+  }
+}
+@media (max-width: 460px) {
+  .blog-top {
+    justify-content: center;
+    height: auto;
+  }
+}
+@media (max-width: 380px) {
+  .blog-top-text {
+    width: 100%;
+    font-size: 2.3rem;
+  }
+}
+
+.custom-list {
+  list-style-position: inside; 
+}
+.custom-list .custom-list-in::marker {
+  font-weight: 400; 
+}
+.custom-list .custom-list-in {
+  font-weight: bold; 
+}
+.custom-list-in ul{
+    font-weight: 400;
+}
+
+
+.main-text{
+    padding: 50px 20px;
+    position: relative;
+}
+.left-text{
+    border-right: 1px solid rgba(128, 128, 128, 0.303);
+}
+.right-text{
+    padding: 0;
+}
+.right-text .sticky{
+    position:sticky;
+    top: 25px;
+    padding: 0 40px;
+}
+.logo-cir{
+    background-color: rgba(48, 33, 110, 1);
+    color: white;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15rem;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "../assets/styles/Scoop.css";
+import {Link} from "react-router-dom"
 
 const Scoop = () => {
   const cloudBlog = [
@@ -9,16 +10,16 @@ const Scoop = () => {
       img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-93.png?resize=1024%2C683",
       description:
         "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
-      link: "http://www.thediallogroupllc.com/2024/12/10/devops-the-key-to-successful-cloud-implementation-in-the-federal-government/",
+      link: "/blogs/devops",
     },
     {
       heading:
-        "DevOps: The Key to Successful Cloud Implementation in the Federal Government",
+        "Cloud Computing: A Lifeline for Federal Public Health in Disaster Recovery",
       img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-92.png?resize=1024%2C683",
       description:
-        "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
-      link: "http://www.thediallogroupllc.com/2024/12/09/cloud-computing-a-lifeline-for-federal-public-health-in-disaster-recovery/",
-    },
+        "In today's world of frequent natural disasters and global health emergencies, federal public health agencies face unprecedented challenges.",
+      link: "/blogs/cloud",
+      },
   ];
   const projectBlog = [
     {
@@ -90,7 +91,7 @@ const Scoop = () => {
         <div className="blogs row" style={{ margin: "0" }}>
           {cloudBlog.map((e, i) => (
             <div className="col-lg-4 col-md-6" key={i}>
-              <div className="each-blog">
+              <div className="each-blog" style={{height:"100%"}}>
                 <h4>{e.heading}</h4>
                 <img src={e.img} alt="" />
                 <p>{e.description}</p>
@@ -115,9 +116,9 @@ const Scoop = () => {
                   <h4>{e.heading}</h4>
                   <img src={e.img} alt="" />
                   <p>{e.description}</p>
-                  <a href={e.link}>
+                  <Link to={e.link}>
                     <button>Read More</button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

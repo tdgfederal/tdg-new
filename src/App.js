@@ -18,6 +18,7 @@ import Leadership from "./pages/Leadership";
 import WhyUs from "./pages/WhyUs";
 import JoinTDG from "./pages/JoinTDG";
 import ContactUs from "./pages/ContactUs";
+import Devops from "./pages/blogs/Devops";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -47,6 +48,7 @@ function App() {
         <Route path="/why-us" element={<WhyUs/>}/>
         <Route path="/join-tdg" element={<JoinTDG/>}/>
         <Route path="/contact-us" element={<ContactUs/>}/>
+        <Route path="/blogs/devops" element={<Devops/>}/>
       </Routes>
       <Footer/>
     </div>
