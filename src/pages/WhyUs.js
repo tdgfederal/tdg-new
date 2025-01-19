@@ -237,7 +237,7 @@ const WhyUs = () => {
             <p>64% Improvement in load balancing</p>
             <p>2 Months project timeline</p>
             <a
-              href="https://www.thediallogroupllc.com/from-legacy-to-leading-edge-a-federal-it-success-story/"
+              href="/case-study/1"
               target="_blank"
             >
               <button
@@ -272,7 +272,7 @@ const WhyUs = () => {
             <p>20% Reduction in security incidents</p>
             <p>30% Faster feature implementation</p>
             <a
-              href="https://www.thediallogroupllc.com/case-study-2-transforming-federal-healthcare-architecture-a-cloud-migration-success-story/"
+              href="/case-study/2"
               target="_blank"
             >
               <button

@@ -23,6 +23,8 @@ import Cloud from "./pages/blogs/Cloud";
 import Risk from "./pages/blogs/Risk";
 import JDevops from "./pages/job-post/Devops";
 import JCloud from "./pages/job-post/Cloud";
+import Case1 from "./pages/case-study/Case1";
+import Case2 from "./pages/case-study/Case2";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -57,6 +59,8 @@ function App() {
         <Route path="/blogs/projects/risk-management" element={<Risk/>}/>
         <Route path="/jobs/devops" element={<JDevops/>}/>
         <Route path="/jobs/cloud" element={<JCloud/>}/>
+        <Route path="/case-study/1" element={<Case1/>}/>
+        <Route path="/case-study/2" element={<Case2/>}/>
       </Routes>
       <Footer/>
     </div>

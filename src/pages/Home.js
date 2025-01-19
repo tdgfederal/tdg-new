@@ -221,10 +221,7 @@ const Home = () => {
             <p>33% Reduction in RDS instance</p>
             <p>64% Improvement in load balancing</p>
             <p>2 Months project timeline</p>
-            <a
-              href="https://www.thediallogroupllc.com/from-legacy-to-leading-edge-a-federal-it-success-story/"
-              target="_blank"
-            >
+            <a href="/case-study/1" target="_blank">
               <button
                 className="sl-inner-btn mt-4"
                 id="bt"
@@ -256,10 +253,7 @@ const Home = () => {
             <p>50% More web traffic handled</p>
             <p>20% Reduction in security incidents</p>
             <p>30% Faster feature implementation</p>
-            <a
-              href="https://www.thediallogroupllc.com/case-study-2-transforming-federal-healthcare-architecture-a-cloud-migration-success-story/"
-              target="_blank"
-            >
+            <a href="/case-study/2" target="_blank">
               <button
                 className="sl-inner-btn mt-4"
                 id="bt"
@@ -277,7 +271,7 @@ const Home = () => {
       <br />
       <br />
       <div className="industries">
-      <h1>BLOGS</h1>
+        <h1>BLOGS</h1>
         {/* <div className="blogs-head">
           <h2>Cloud Series Blogs</h2>
           <div className="blog-line"></div>
@@ -303,17 +297,35 @@ const Home = () => {
             <h1 style={{ fontWeight: "600" }}>Send Us A Message</h1>
             <p>Let us know what you think</p>
             <form onSubmit={handleSubmit}>
-              <input type="text" placeholder="Name" name="name"  onChange={handleChange}/>
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                onChange={handleChange}
+              />
               <br />
-              <input className="my-3" type="email" placeholder="Email" name="email"  onChange={handleChange}/>
+              <input
+                className="my-3"
+                type="email"
+                placeholder="Email"
+                name="email"
+                onChange={handleChange}
+              />
               <br />
-              <textarea name="message" placeholder="Message" id="" onChange={handleChange}></textarea>
+              <textarea
+                name="message"
+                placeholder="Message"
+                id=""
+                onChange={handleChange}
+              ></textarea>
               <button>Send</button>
             </form>
           </div>
         </div>
         <br />
-      </div><br /><br />
+      </div>
+      <br />
+      <br />
       <div className="industries mx-5" style={{ textAlign: "center" }}>
         <h1 id="testi">TESTIMONIALS</h1>
         <div style={{ fontStyle: "italic" }}>
