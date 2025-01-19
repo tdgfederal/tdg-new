@@ -1,0 +1,71 @@
+.job-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 180px;
+}
+.share-job {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+.btn-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.share-job:hover {
+  color: rgba(59, 168, 189, 1);
+  border: 1px solid rgba(59, 168, 189, 1);
+}
+
+.job-desc {
+  padding: 0 180px;
+  margin-top: -30px;
+}
+#job-form {
+  padding: 0 180px;
+}
+@media (max-width: 1200px) {
+  .job-head {
+    padding: 90px 50px;
+  }
+  .job-desc,
+  #job-form {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 930px) {
+  .job-head {
+    padding: 90px 50px;
+  }
+  .job-desc,
+  #job-form {
+    padding: 0 50px;
+  }
+  .btn-flex {
+    gap: 10px;
+  }
+}
+@media(max-width:768px){
+    .job-head{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+}
+@media(max-width:390px){
+    .job-head{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+}

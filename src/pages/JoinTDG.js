@@ -207,7 +207,7 @@ const JoinTDG = () => {
           </h2>
           <a
             className="an-role"
-            href="http://www.thediallogroupllc.com/job-openings-cloud-solution-engineer/"
+            href="/jobs/cloud"
             target="_blank"
           >
             Cloud Solution Engineer
@@ -215,7 +215,7 @@ const JoinTDG = () => {
           <br />
           <a
             className="an-role"
-            href="http://www.thediallogroupllc.com/job-openings-senior-devops-engineer/"
+            href="/jobs/devops"
             target="_blank"
           >
             Senior DevOps Engineer
