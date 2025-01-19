@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../assets/styles/Home.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const Home = () => {
   const nav = useNavigate();
   const images = [
@@ -56,7 +56,7 @@ const Home = () => {
       img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-93.png?resize=1024%2C683",
       description:
         "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
-      link: "http://www.thediallogroupllc.com/2024/12/10/devops-the-key-to-successful-cloud-implementation-in-the-federal-government/",
+      link: "/blogs/cloud",
     },
     {
       heading:
@@ -64,7 +64,7 @@ const Home = () => {
       img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-92.png?resize=1024%2C683",
       description:
         "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
-      link: "http://www.thediallogroupllc.com/2024/12/09/cloud-computing-a-lifeline-for-federal-public-health-in-disaster-recovery/",
+      link: "/blogs/devops",
     },
   ];
   return (
@@ -289,9 +289,9 @@ const Home = () => {
                 <h4>{e.heading}</h4>
                 <img src={e.img} alt="" />
                 <p>{e.description}</p>
-                <a href={e.link}>
+                <Link to={e.link}>
                   <button>Read More</button>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
