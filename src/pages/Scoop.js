@@ -28,7 +28,7 @@ const Scoop = () => {
       img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-92-copy.png?resize=1024%2C683",
       description:
         "In the complex landscape of federal health projects, effective risk management is essential to ensure project success, minimize potential disruptions, and protect public health.",
-      link: "http://www.thediallogroupllc.com/2024/12/10/risk-management-a-critical-component-of-federal-health-project-management/",
+      link: "/blogs/projects/risk-management",
     },
   ];
   const [formData, setFormData] = useState({
@@ -95,9 +95,9 @@ const Scoop = () => {
                 <h4>{e.heading}</h4>
                 <img src={e.img} alt="" />
                 <p>{e.description}</p>
-                <a href={e.link}>
+                <Link to={e.link}>
                   <button>Read More</button>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

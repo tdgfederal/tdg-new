@@ -4,7 +4,12 @@ import { FaFacebook } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import {FacebookShareButton, LinkedinShareButton, TwitterShareButton, MailruShareButton} from "react-share"
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  MailruShareButton,
+} from "react-share";
 
 const Devops = () => {
   const [formData, setFormData] = useState({
@@ -39,10 +44,15 @@ const Devops = () => {
       alert("Failed! Try again.");
     }
   };
-  const shareUrl = window.location.href
+  const shareUrl = window.location.href;
   return (
     <div className="industries">
-      <div className="blog-top">
+      <div
+        className="blog-top"
+        style={{
+          backgroundImage: `url("https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-93.png?resize=1024%2C683)`,
+        }}
+      >
         <div className="blog-top-text">
           DevOps: The Key to Successful Cloud Implementation in the Federal
           Government
@@ -272,14 +282,33 @@ const Devops = () => {
               </form>
             </div>
             <div>
-              <p className="mt-5 mb-4" style={{ color: "grey", fontSize: "0.85rem" }}>
+              <p
+                className="mt-5 mb-4"
+                style={{ color: "grey", fontSize: "0.85rem" }}
+              >
                 Share this post
               </p>
-              <div style={{display:'flex', alignItems:"center", gap:"10px"}}>
-                <div className="logo-cir"><FacebookShareButton url={shareUrl}><FaFacebook/></FacebookShareButton></div>
-                <div className="logo-cir"><LinkedinShareButton url={shareUrl}><IoLogoLinkedin/></LinkedinShareButton></div>
-                <div className="logo-cir"><TwitterShareButton url={shareUrl}><FaXTwitter/></TwitterShareButton></div>
-                <a href="" className="logo-cir"><IoMdMail/></a>
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+              >
+                <div className="logo-cir">
+                  <FacebookShareButton url={shareUrl}>
+                    <FaFacebook />
+                  </FacebookShareButton>
+                </div>
+                <div className="logo-cir">
+                  <LinkedinShareButton url={shareUrl}>
+                    <IoLogoLinkedin />
+                  </LinkedinShareButton>
+                </div>
+                <div className="logo-cir">
+                  <TwitterShareButton url={shareUrl}>
+                    <FaXTwitter />
+                  </TwitterShareButton>
+                </div>
+                <a href="" className="logo-cir">
+                  <IoMdMail />
+                </a>
               </div>
             </div>
           </div>
