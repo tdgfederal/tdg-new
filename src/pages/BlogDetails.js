@@ -55,8 +55,8 @@ const Cloud = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    organization: "",
-    interest: "",
+    organization: ".",
+    interest: ".",
     message: "",
   });
   const handleChange = (e) => {
