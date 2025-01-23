@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Create = () => {
   const [formData, setFormData] = useState({
-    category:"",
+    category: "",
     title: "",
     image: "",
     description: "",
@@ -38,7 +38,7 @@ const Create = () => {
     }
   };
   // console.log("form:", formData);
-  
+
   return (
     <div className="industries">
       <h1>CREATE BLOG</h1>
@@ -53,15 +53,21 @@ const Create = () => {
               Let us know what you think
             </p>
             <form onSubmit={handleSubmit}>
-              <select name="category" id="" style={{padding:"8px"}} onChange={handleChange}>
-                <option value="" disabled>Select Category</option>
+              <select
+                name="category"
+                className="mb-3"
+                id=""
+                style={{ padding: "8px", fontSize: "0.75rem" }}
+                onChange={handleChange}
+              >
+                <option value="">--Select Category--</option>
                 <option value="Cloud">Cloud</option>
                 <option value="Project">Project</option>
               </select>
               <br />
               <input
                 type="text"
-                placeholder="Enter the title of the blog"
+                placeholder="Enter your blog title here"
                 name="title"
                 onChange={handleChange}
                 style={{ padding: "10px 15px", fontSize: "0.75rem" }}
@@ -70,7 +76,7 @@ const Create = () => {
               <input
                 className="my-3"
                 type="text"
-                placeholder="Image URL"
+                placeholder="Enter the URL for your blog's featured image"
                 name="image"
                 onChange={handleChange}
                 style={{ padding: "10px 15px", fontSize: "0.75rem" }}
@@ -78,42 +84,66 @@ const Create = () => {
               <br />
               <textarea
                 name="description"
-                placeholder="Description"
+                placeholder="e.g., A brief overview of the blog's topic"
                 id=""
                 onChange={handleChange}
                 style={{ padding: "10px 15px", fontSize: "0.75rem" }}
               ></textarea>
-              <textarea
+              <input
+                className="mb-3"
                 name="matter"
-                placeholder="Enter the heading for the matter"
+                type="text"
+                placeholder="e.g., Why DevOps Matters"
                 id=""
                 onChange={handleChange}
                 style={{ padding: "10px 15px", fontSize: "0.75rem" }}
-              ></textarea>
+              />
               <textarea
                 name="matterDesc"
-                placeholder="Enter matter's description"
+                placeholder="e.g.,
+                1.Accelerated Time to Market:
+Rapid Deployment: DevOps practices streamline the software development lifecycle, allowing for faster deployment of cloud-based applications and services.
+Continuous Delivery: Automated deployment pipelines enable frequent and reliable releases, ensuring that federal agencies can quickly adapt to changing needs and emerging threats.
+2.Enhanced Collaboration and Efficiency:
+Functional Teams: DevOps fosters collaboration between development, operations, and security teams, breaking down silos and promoting a shared sense of ownership.
+Automated Processes: By automating routine tasks, such as infrastructure provisioning and testing, DevOps frees up teams to focus on higher-value activities."
                 id=""
                 onChange={handleChange}
-                style={{ padding: "10px 15px", fontSize: "0.75rem" }}
+                style={{
+                  padding: "10px 15px",
+                  fontSize: "0.75rem",
+                  minHeight: "220px",
+                }}
               ></textarea>
-              <textarea
+              <input
+                className="mb-3"
+                type="text"
                 name="implementation"
-                placeholder="Enter the heading of the implementation"
+                placeholder="e.g., Implementing DevOps in Federal Cloud Environments:"
                 id=""
                 onChange={handleChange}
                 style={{ padding: "10px 15px", fontSize: "0.75rem" }}
-              ></textarea>
+              ></input>
               <textarea
                 name="implementationDesc"
-                placeholder="Enter implementation's description"
+                placeholder="e.g.,
+                1.Accelerated Time to Market:
+Rapid Deployment: DevOps practices streamline the software development lifecycle, allowing for faster deployment of cloud-based applications and services.
+Continuous Delivery: Automated deployment pipelines enable frequent and reliable releases, ensuring that federal agencies can quickly adapt to changing needs and emerging threats.
+2.Enhanced Collaboration and Efficiency:
+Functional Teams: DevOps fosters collaboration between development, operations, and security teams, breaking down silos and promoting a shared sense of ownership.
+Automated Processes: By automating routine tasks, such as infrastructure provisioning and testing, DevOps frees up teams to focus on higher-value activities."
                 id=""
                 onChange={handleChange}
-                style={{ padding: "10px 15px", fontSize: "0.75rem" }}
+                style={{
+                  padding: "10px 15px",
+                  fontSize: "0.75rem",
+                  minHeight: "220px",
+                }}
               ></textarea>
               <textarea
                 name="conslusion"
-                placeholder="Enter conslusion"
+                placeholder="e.g., In conclusion, here's what you should remember.."
                 id=""
                 onChange={handleChange}
                 style={{ padding: "10px 15px", fontSize: "0.75rem" }}
@@ -122,7 +152,11 @@ const Create = () => {
             </form>
           </div>
         </div>
-      </div><br /><br /><br /><br />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
