@@ -10,7 +10,7 @@ const Navbar = () => {
   const [click, setClick] = useState(false);
 
   return (
-    <section id="nav-tdg" className="navbar-section">
+    <section id="nav-tdg" className="navbar-section" style={{position:"relative"}}>
       {cont ? <Contact setCont={setCont} /> : ""}
       {click ? (
         <div className="navbar-col">

@@ -69,3 +69,21 @@
         gap: 20px;
     }
 }
+
+
+.modal-baap{
+  background-color: rgba(0, 0, 0, 0.381);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-chota{
+  background-color: white;
+  padding: 50px;
+  border-radius: 8px;
+}

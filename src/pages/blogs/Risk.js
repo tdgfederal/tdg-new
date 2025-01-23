@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Devops.css";
+import "../../assets/styles/Devops.css";
 import { FaFacebook } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";

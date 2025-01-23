@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../assets/styles/Home.css";
 import { useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 const Home = () => {
   const nav = useNavigate();
   const images = [
@@ -49,24 +50,13 @@ const Home = () => {
       alert("Failed! Try again.");
     }
   };
-  const cloudBlog = [
-    {
-      heading:
-        "DevOps: The Key to Successful Cloud Implementation in the Federal Government",
-      img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-93.png?resize=1024%2C683",
-      description:
-        "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
-      link: "/blogs/cloud",
-    },
-    {
-      heading:
-        "DevOps: The Key to Successful Cloud Implementation in the Federal Government",
-      img: "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-92.png?resize=1024%2C683",
-      description:
-        "The federal government's increasing reliance on cloud computing has brought about a paradigm shift in how IT services are delivered.",
-      link: "/blogs/devops",
-    },
-  ];
+  const [blog, setBlog] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://tdg-new-backend.onrender.com/getBlogs")
+      .then((blogs) => setBlog(blogs.data))
+      .catch((error) => console.log(error));
+  });
   return (
     <div>
       <div
@@ -277,13 +267,13 @@ const Home = () => {
           <div className="blog-line"></div>
         </div> */}
         <div className="blogs row" style={{ margin: "0" }}>
-          {cloudBlog.map((e, i) => (
+          {blog.map((e, i) => (
             <div className="col-lg-4 col-md-6 mx-auto" key={i}>
-              <div className="each-blog">
-                <h4>{e.heading}</h4>
-                <img src={e.img} alt="" />
-                <p>{e.description}</p>
-                <Link to={e.link}>
+              <div className="each-blog" style={{height:"100%"}}>
+                <h4>{e.title}</h4>
+                <img src={e.image} alt="" />
+                <p>{e.description.slice(0, 159)}...</p>
+                <Link to={"/blog-details"} state={{ blogDetails: e }}>
                   <button>Read More</button>
                 </Link>
               </div>
