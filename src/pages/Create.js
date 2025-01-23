@@ -31,7 +31,7 @@ const Create = () => {
           body: JSON.stringify(formData),
         }
       );
-    //   window.location.reload();
+      window.location.reload();
     } catch (error) {
       // console.log(error);
       alert("Failed! Try again.");
