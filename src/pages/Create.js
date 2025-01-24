@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
+  const nav = useNavigate();
+  const [click, setClick] = useState(false);
   const [formData, setFormData] = useState({
     category: "",
     title: "",
@@ -31,16 +34,41 @@ const Create = () => {
           body: JSON.stringify(formData),
         }
       );
-      window.location.reload();
+      const data = await response.json();
+      if (data.success) {
+        setClick(true);
+      }
     } catch (error) {
       // console.log(error);
       alert("Failed! Try again.");
     }
   };
   // console.log("form:", formData);
+  const handleClick = (e) => {
+    setClick(false);
+    nav("/scoop");
+  };
 
   return (
     <div className="industries">
+      {click ? (
+        <div className="modal-baap">
+          <div className="modal-chota text-center">
+            <h2>Your Blog Has Been Created!</h2>
+            <br />
+            <button
+              className="sl-inner-btn-form"
+              id="bt-n"
+              style={{ width: "max-content", padding: "8px 70px" }}
+              onClick={handleClick}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
       <h1>CREATE BLOG</h1>
       <div className="right-text col-lg-8 col-md-10 mx-auto">
         <div className="scoop-bottom sticky">
@@ -52,7 +80,7 @@ const Create = () => {
             <p style={{ marginTop: "0", fontSize: "0.8rem" }}>
               Let us know what you think
             </p>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} method="POST">
               <select
                 name="category"
                 className="mb-3"
