@@ -46,6 +46,7 @@ const Home = () => {
       const data = await response.json();
       if (data.success) {
         alert("From Submitted Successfully!");
+        window.location.reload();
       }
     } catch (error) {
       console.log(error);
