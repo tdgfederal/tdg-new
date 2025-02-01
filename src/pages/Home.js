@@ -20,8 +20,8 @@ const Home = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    organization: "",
-    interest: "",
+    organization: ".",
+    interest: ".",
     message: "",
   });
   const handleChange = (e) => {
@@ -43,7 +43,10 @@ const Home = () => {
           body: JSON.stringify(formData),
         }
       );
-      window.location.reload();
+      const data = await response.json();
+      if (data.success) {
+        alert("From Submitted Successfully!");
+      }
     } catch (error) {
       console.log(error);
       alert("Failed! Try again.");
