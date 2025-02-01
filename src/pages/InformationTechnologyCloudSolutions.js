@@ -3,6 +3,9 @@ import "../assets/styles/InformationTechnologyCloudSolutions.css";
 import l1 from "../assets/images/aws.png";
 import l2 from "../assets/images/azure.png";
 import l3 from "../assets/images/gc.png";
+import f114 from "../assets/images/Frame-114.png";
+import f119 from "../assets/images/Frame-119.png";
+import cg from "../assets/images/Cloud-graphic.png";
 
 const InformationTechnologyCloudSolutions = () => {
   const [formData, setFormData] = useState({
@@ -68,7 +71,7 @@ const InformationTechnologyCloudSolutions = () => {
             }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Frame-114.png?w=653"
+              src={f114}
               alt=""
             />
           </div>
@@ -125,7 +128,7 @@ const InformationTechnologyCloudSolutions = () => {
         </h2>
         <div className="info-img">
           <img
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Cloud-graphic.png?resize=1024%2C407"
+            src={cg}
             alt=""
           />
         </div>
@@ -255,7 +258,7 @@ const InformationTechnologyCloudSolutions = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Frame-119.png?w=653"
+              src={f119}
               alt=""
             />
           </div>

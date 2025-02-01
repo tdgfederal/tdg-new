@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../assets/styles/ContractVehicles.css";
+import ea from "../assets/images/8aCertified.png";
 
 const ContractVehicles = () => {
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -82,7 +83,7 @@ const ContractVehicles = () => {
               <div className="accordion-body">
                 <img
                   className="acc-body-img"
-                  src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/8aCertified.png?resize=919%2C1024&ssl=1"
+                  src={ea}
                   alt=""
                 />
                 <div className="acc-body-text">

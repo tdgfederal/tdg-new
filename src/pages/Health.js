@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/styles/PublicSector.css";
 import { useNavigate } from "react-router-dom";
+import Healthcar from "../assets/images/Healthcare.png";
 
 const Health = () => {
   const nav = useNavigate();
@@ -13,7 +14,7 @@ const Health = () => {
           </h1>
           <img
             className="img-c1"
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Healthcare.png?w=672"
+            src={Healthcar}
             alt=""
           />
           <div className="cont-c1 mt-4">

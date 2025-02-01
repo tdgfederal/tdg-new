@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/styles/PublicSector.css";
 import { useNavigate } from "react-router-dom";
+import Commercia from "../assets/images/Commercial.png";
 
 const Commercial = () => {
   const nav = useNavigate();
@@ -13,7 +14,7 @@ const Commercial = () => {
           </h1>
           <img
             className="img-c1"
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Commercial.png?w=672&ssl=1"
+            src={Commercia}
             alt=""
           />
           <div className="cont-c1 mt-5">

@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/styles/Leadership.css";
+import pic from "../assets/images/untitled-96.jpg";
 
 const Leadership = () => {
   return (
@@ -17,7 +18,7 @@ const Leadership = () => {
           <div className="">
             <img
               className="limg"
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-96.jpg?w=480"
+              src={pic}
               alt=""
               style={{
                 borderRadius: "1000px",

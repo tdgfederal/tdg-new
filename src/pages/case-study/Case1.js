@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import "./Case.css";
+import cs1 from "../../assets/images/cs1.jpg";
+import cs2 from "../../assets/images/cs2.jpg";
 
 const Case1 = () => {
       const [formData, setFormData] = useState({
@@ -161,7 +163,7 @@ const Case1 = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-126-copy.jpg?fit=1024%2C1024&ssl=1"
+              src={cs1}
               alt=""
               style={{ transform: "rotate(180deg)", borderRadius: "0" }}
             />
@@ -222,7 +224,7 @@ const Case1 = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-128-1.jpg?w=800"
+              src={cs2}
               alt=""
               style={{ transform: "rotate(0deg)", borderRadius: "0" }}
             />

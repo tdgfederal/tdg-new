@@ -3,6 +3,10 @@ import "../assets/styles/WhyUs.css";
 import l1 from "../assets/images/8.png";
 import { FaDownload } from "react-icons/fa6";
 import file from "../assets/qms.0520-Quality-Policy-_updated.pdf";
+import iso from "../assets/images/ISO-9001.png";
+import pmp from "../assets/images/PMP.png";
+import safe from "../assets/images/SAFe.png";
+import cloud from "../assets/images/Certified-Cloud-1.png";
 
 const WhyUs = () => {
     const handleClick = () => {
@@ -147,7 +151,7 @@ const WhyUs = () => {
             <div style={{ textAlign: "center" }}>
               <img
                 height={250}
-                src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/ISO-9001.png?w=536"
+                src={iso}
                 alt=""
               />
               <div
@@ -164,7 +168,7 @@ const WhyUs = () => {
             <div style={{ textAlign: "center" }}>
               <img
                 height={250}
-                src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/PMP.png?w=536"
+                src={pmp}
                 alt=""
               />
               <div
@@ -177,7 +181,7 @@ const WhyUs = () => {
             <div style={{ textAlign: "center" }}>
               <img
                 height={250}
-                src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/SAFe.png?w=537"
+                src={safe}
                 alt=""
               />
               <div
@@ -190,7 +194,7 @@ const WhyUs = () => {
             <div style={{ textAlign: "center" }}>
               <img
                 height={250}
-                src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/Certified-Cloud-1.png?w=537"
+                src={cloud}
                 alt=""
               />
               <div

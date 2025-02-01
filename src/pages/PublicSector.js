@@ -1,6 +1,9 @@
 import React from "react";
 import "../assets/styles/PublicSector.css";
 import { useNavigate } from "react-router-dom";
+import ps from "../assets/images/Public-Sector.png";
+import ea from "../assets/images/8aCertified.png";
+import swam from "../assets/images/swam-1-1.png";
 const PublicSector = () => {
   const nav = useNavigate();
   return (
@@ -12,7 +15,7 @@ const PublicSector = () => {
           </h1>
           <img
             className="img-c1"
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Public-Sector.png?w=672s"
+            src={ps}
             alt=""
           />
           <div className="cont-c1 mt-3">
@@ -179,12 +182,12 @@ const PublicSector = () => {
             }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/8aCertified-1.png?fit=152%2C192"
+              src={ea}
               height={180}
               alt=""
             />
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/swam-1-1.png?w=331"
+              src={swam}
               height={120}
               alt=""
             />

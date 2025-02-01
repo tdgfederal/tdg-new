@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import "./Case.css";
+import c1 from "../../assets/images/c1.png";
+import c2 from "../../assets/images/c2.jpg";
+import c3 from "../../assets/images/c3.jpg";
+import c4 from "../../assets/images/c4.jpg";
 
 const Case2 = () => {
   const [formData, setFormData] = useState({
@@ -117,7 +121,7 @@ const Case2 = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-136.png?w=800"
+              src={c1}
               alt=""
               style={{ transform: "rotate(0deg)", borderRadius: "0" }}
             />
@@ -170,7 +174,7 @@ const Case2 = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-139-scaled.jpg?w=800"
+              src={c2}
               alt=""
               style={{ transform: "scaleX(-1)", borderRadius: "0" }}
             />
@@ -182,7 +186,7 @@ const Case2 = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-138-scaled.jpg?w=800"
+              src={c3}
               alt=""
               style={{ transform: "rotate(0deg)", borderRadius: "0" }}
             />
@@ -279,7 +283,7 @@ const Case2 = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-137-scaled.jpg?w=800"
+              src={c4}
               alt=""
               style={{ transform: "scaleX(-1)", borderRadius: "0" }}
             />

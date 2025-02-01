@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../assets/styles/Home.css";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import ca1 from "../assets/images/ca1.png";
+import ca2 from "../assets/images/ca2.png";
+import ca3 from "../assets/images/ca3.png";
 const Home = () => {
   const nav = useNavigate();
-  const images = [
-    "http://www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-44-2-1.png",
-    "http://www.thediallogroupllc.com/wp-content/uploads/2024/11/Property-1Frame-213.png",
-    "http://www.thediallogroupllc.com/wp-content/uploads/2024/11/Property-1Frame-214.png",
-  ];
+  const images = [ca1, ca2, ca3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -269,7 +268,7 @@ const Home = () => {
         <div className="blogs row" style={{ margin: "0" }}>
           {blog.map((e, i) => (
             <div className="col-lg-4 col-md-6 mx-auto" key={i}>
-              <div className="each-blog" style={{height:"100%"}}>
+              <div className="each-blog" style={{ height: "100%" }}>
                 <h4>{e.title}</h4>
                 <img src={e.image} alt="" />
                 <p>{e.description.slice(0, 159)}...</p>

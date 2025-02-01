@@ -6,6 +6,7 @@ import l3 from "../assets/images/3.png";
 import l4 from "../assets/images/4.png";
 import l5 from "../assets/images/5.png";
 import l6 from "../assets/images/6.png";
+import whi from "../assets/images/whi.png";
 
 const ProgramProjectManagement = () => {
   const services = [
@@ -104,7 +105,7 @@ const ProgramProjectManagement = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/white-abstract-geometric-shapes-against-gray-background.png?w=653"
+              src={whi}
               alt=""
             />
           </div>
@@ -221,7 +222,7 @@ const ProgramProjectManagement = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-126.png?w=653"
+              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-126.jpg?w=653"
               alt=""
             />
           </div>

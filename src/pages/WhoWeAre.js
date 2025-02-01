@@ -4,6 +4,7 @@ import l1 from "../assets/images/1.png";
 import l2 from "../assets/images/2.png";
 import l3 from "../assets/images/7.png";
 import {useNavigate} from "react-router-dom"
+import who from "../assets/images/Frame-112.png";
 
 const WhoWeAre = () => {
   const nav = useNavigate();
@@ -36,7 +37,7 @@ const WhoWeAre = () => {
           </h1>
           <img
             className="img-c1"
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Frame-112.png?w=714"
+            src={who}
             alt=""
           />
           <div className="cont-c1" style={{ marginTop: "85px" }}>
