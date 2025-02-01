@@ -24,7 +24,7 @@ import JCloud from "./pages/job-post/Cloud";
 import Case1 from "./pages/case-study/Case1";
 import Case2 from "./pages/case-study/Case2";
 import Create from "./pages/Create";
-import BlogDetails from "./pages/BlogDetails";
+import BlogDetails from "./pages/BlogDetails"
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
