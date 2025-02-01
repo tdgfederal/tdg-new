@@ -1,41 +1,45 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Case.css";
 import cs1 from "../../assets/images/cs1.jpg";
 import cs2 from "../../assets/images/cs2.jpg";
 
 const Case1 = () => {
-      const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        organization: "",
-        interest: "",
-        message: "",
-      });
-      const handleChange = (e) => {
-        setFormData({
-          ...formData,
-          [e.target.name]: e.target.value,
-        });
-      };
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-          const response = await fetch(
-            "https://tdg-new-backend.onrender.com/api/contact",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(formData),
-            }
-          );
-          window.location.reload();
-        } catch (error) {
-          console.log(error);
-          alert("Failed! Try again.");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    organization: "",
+    interest: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://tdg-new-backend.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         }
-      };
+      );
+      const data = await response.json();
+      if (data.success) {
+        alert("From Submitted Successfully!");
+        window.location.reload();
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Failed! Try again.");
+    }
+  };
   return (
     <div className="industries">
       <div className="case-head">
@@ -335,7 +339,7 @@ const Case1 = () => {
           IMPLEMENTATION PROCESS
         </h2>
       </div>
-      <div className="impl-main" style={{backgroundColor: "#f8f8f8"}}>
+      <div className="impl-main" style={{ backgroundColor: "#f8f8f8" }}>
         <div className="impl">
           <div className="each-impl">
             <div>
@@ -394,7 +398,10 @@ const Case1 = () => {
             </div>
           </div>
         </div>
-      </div><br /><br /><br />
+      </div>
+      <br />
+      <br />
+      <br />
       <div className="contra-line"></div>
       <br />
       <div
@@ -405,9 +412,16 @@ const Case1 = () => {
           <div className="left-cont col-lg-6 col-md-6">
             <h2 className="fw-bold">LET'S WORK TOGETHER</h2>
             <p className="" style={{ fontWeight: "" }}>
-            Ready to optimize your programs and drive positive change? Contact us today to learn more about how our program governance and delivery services can help you achieve your goals.
+              Ready to optimize your programs and drive positive change? Contact
+              us today to learn more about how our program governance and
+              delivery services can help you achieve your goals.
             </p>
-            <img className="mb-4" src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-127.jpg?resize=1024%2C683&ssl=1" alt="" style={{width:"100%", borderRadius:"12px"}} />
+            <img
+              className="mb-4"
+              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-127.jpg?resize=1024%2C683&ssl=1"
+              alt=""
+              style={{ width: "100%", borderRadius: "12px" }}
+            />
           </div>
           <form className="form col-lg-6 col-md-6" onSubmit={handleSubmit}>
             <label style={{ fontWeight: "600" }} htmlFor="">
@@ -495,7 +509,12 @@ const Case1 = () => {
             </button>
           </form>
         </div>
-      </div><br /><br /><br /><br /><br />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div style={{ textAlign: "center" }}>
         <a
           className="industries"

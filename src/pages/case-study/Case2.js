@@ -32,7 +32,11 @@ const Case2 = () => {
           body: JSON.stringify(formData),
         }
       );
-      window.location.reload();
+      const data = await response.json();
+      if (data.success) {
+        alert("From Submitted Successfully!");
+        window.location.reload();
+      }
     } catch (error) {
       console.log(error);
       alert("Failed! Try again.");
@@ -77,36 +81,70 @@ const Case2 = () => {
           </div>
           <div className="col-lg-6 col-md-6 new-row-col-2">
             <ul>
-              <li className="fs-4" style={{fontWeight:"600"}}>Significant Cost Savings</li>
+              <li className="fs-4" style={{ fontWeight: "600" }}>
+                Significant Cost Savings
+              </li>
             </ul>
             <p>
-              <span className="fw-bold">Reduced operational costs by $100 million annually</span> through
-              optimized resource utilization and cloud cost efficiencies.
-            </p><br />
+              <span className="fw-bold">
+                Reduced operational costs by $100 million annually
+              </span>{" "}
+              through optimized resource utilization and cloud cost
+              efficiencies.
+            </p>
+            <br />
             <ul>
-              <li className="fs-4" style={{fontWeight:"600"}}>Improved Performance</li>
+              <li className="fs-4" style={{ fontWeight: "600" }}>
+                Improved Performance
+              </li>
             </ul>
             <p>
-            Enhanced system performance and responsiveness, <span className="fw-bold">leading to a 30% faster user experience.</span>
-            </p><br />
+              Enhanced system performance and responsiveness,{" "}
+              <span className="fw-bold">
+                leading to a 30% faster user experience.
+              </span>
+            </p>
+            <br />
             <ul>
-              <li className="fs-4" style={{fontWeight:"600"}}>Enhanced Security</li>
+              <li className="fs-4" style={{ fontWeight: "600" }}>
+                Enhanced Security
+              </li>
             </ul>
             <p>
-            Strengthened security posture through advanced security measures and compliance with industry standards, <span className="fw-bold">resulting in a 20% reduction in security incidents.</span>
-            </p><br />
+              Strengthened security posture through advanced security measures
+              and compliance with industry standards,{" "}
+              <span className="fw-bold">
+                resulting in a 20% reduction in security incidents.
+              </span>
+            </p>
+            <br />
             <ul>
-              <li className="fs-4" style={{fontWeight:"600"}}>Increased Scalability</li>
+              <li className="fs-4" style={{ fontWeight: "600" }}>
+                Increased Scalability
+              </li>
             </ul>
             <p>
-            Enabled the platform to handle <span className="fw-bold"> 50% more traffic during peak enrollment periods.</span>
-            </p><br />
+              Enabled the platform to handle{" "}
+              <span className="fw-bold">
+                {" "}
+                50% more traffic during peak enrollment periods.
+              </span>
+            </p>
+            <br />
             <ul>
-              <li className="fs-4" style={{fontWeight:"600"}}>Accelerated Innovation</li>
+              <li className="fs-4" style={{ fontWeight: "600" }}>
+                Accelerated Innovation
+              </li>
             </ul>
             <p>
-            Adopted a DevOps approach to accelerate development and deployment cycles,<span className="fw-bold"> leading to a 30% reduction in time to market for new features.</span>
-            </p><br />
+              Adopted a DevOps approach to accelerate development and deployment
+              cycles,
+              <span className="fw-bold">
+                {" "}
+                leading to a 30% reduction in time to market for new features.
+              </span>
+            </p>
+            <br />
           </div>
         </div>
         <br />

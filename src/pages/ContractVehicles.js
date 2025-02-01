@@ -34,7 +34,11 @@ const ContractVehicles = () => {
           body: JSON.stringify(formData),
         }
       );
-      window.location.reload();
+      const data = await response.json();
+      if (data.success) {
+        alert("From Submitted Successfully!");
+        window.location.reload();
+      }
     } catch (error) {
       console.log(error);
       alert("Failed! Try again.");
