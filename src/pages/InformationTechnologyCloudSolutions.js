@@ -36,7 +36,7 @@ const InformationTechnologyCloudSolutions = () => {
       );
       const data = await response.json();
       if (data.success) {
-        alert("From Submitted Successfully!");
+        alert("Form Successfully Submitted!");
         window.location.reload();
       }
     } catch (error) {

@@ -181,7 +181,7 @@ const Footer = () => {
           <TfiLinkedin />
         </a>
         <br />
-        <p>
+        {/* <p>
           Inquiries:{" "}
           <span className="fw-bold" style={{ textDecoration: "underline" }}>
             <a className="anch-h" href="mailto:info@thediallogroupllc.com">
@@ -201,7 +201,7 @@ const Footer = () => {
             </a>
           </span>
         </p>
-        <br />
+        <br /> */}
         <div
           className="d-flex align-items-center justify-content-center"
           style={{ gap: "50px" }}
