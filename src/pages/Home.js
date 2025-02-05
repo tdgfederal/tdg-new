@@ -5,6 +5,9 @@ import axios from "axios";
 import ca1 from "../assets/images/ca1.png";
 import ca2 from "../assets/images/ca2.png";
 import ca3 from "../assets/images/ca3.png";
+import cap1 from "../assets/images/cap1.webp";
+import cap2 from "../assets/images/cap2.webp";
+import lr from "../assets/images/lr.webp";
 const Home = () => {
   const nav = useNavigate();
   const images = [ca1, ca2, ca3];
@@ -15,8 +18,7 @@ const Home = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [images.length]);
-  const imageUrl =
-    "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Case-study-1.png?fit=399%2C496";
+  const imageUrl = lr;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -130,7 +132,7 @@ const Home = () => {
         <div className="c1" style={{ margin: "auto" }}>
           <img
             className="img-c1"
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-39-2.png?resize=768%2C512"
+            src={cap1}
             alt=""
           />
           <div className="cont-c1">
@@ -184,7 +186,7 @@ const Home = () => {
           </div>
           <img
             className="img-c2"
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-40.png?resize=768%2C513"
+            src={cap2}
             alt=""
           />
           <div className="line-2"></div>

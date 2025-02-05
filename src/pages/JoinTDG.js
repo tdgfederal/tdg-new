@@ -9,6 +9,7 @@ import l6 from "../assets/images/14.png";
 import l7 from "../assets/images/15.png";
 import l8 from "../assets/images/16.png";
 import l9 from "../assets/images/17.png";
+import jt from "../assets/images/jt.webp";
 
 const JoinTDG = () => {
   const services = [
@@ -78,7 +79,7 @@ const JoinTDG = () => {
           </h1>
           <img
             className="img-c1"
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/startup-business-people-teamwork-cooperation-hands-together.jpg?resize=1024%2C683"
+            src={jt}
             alt=""
           />
           <div className="cont-c1" style={{ marginTop: "85px" }}>

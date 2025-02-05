@@ -4,6 +4,7 @@ import c1 from "../../assets/images/c1.png";
 import c2 from "../../assets/images/c2.jpg";
 import c3 from "../../assets/images/c3.jpg";
 import c4 from "../../assets/images/c4.jpg";
+import cu from "../../assets/images/cu.webp";
 
 const Case2 = () => {
   const [formData, setFormData] = useState({
@@ -421,7 +422,7 @@ const Case2 = () => {
             </p>
             <img
               className="mb-4"
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-127.jpg?resize=1024%2C683&ssl=1"
+              src={cu}
               alt=""
               style={{ width: "100%", borderRadius: "12px" }}
             />

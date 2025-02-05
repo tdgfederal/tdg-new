@@ -6,6 +6,7 @@ import l3 from "../assets/images/gc.png";
 import f114 from "../assets/images/Frame-114.png";
 import f119 from "../assets/images/Frame-119.png";
 import cg from "../assets/images/Cloud-graphic.png";
+import cu from "../assets/images/cu.webp";
 
 const InformationTechnologyCloudSolutions = () => {
   const [formData, setFormData] = useState({
@@ -283,7 +284,7 @@ const InformationTechnologyCloudSolutions = () => {
             </p>
             <img
               className="mb-4"
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-127.jpg?resize=1024%2C683&ssl=1"
+              src={cu}
               alt=""
               style={{ width: "100%", borderRadius: "12px" }}
             />

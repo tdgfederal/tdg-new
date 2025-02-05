@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../assets/styles/ContractVehicles.css";
 import ea from "../assets/images/8aCertified.png";
+import gsa from "../assets/images/gsa.webp";
+import cu from "../assets/images/cu.webp";
 
 const ContractVehicles = () => {
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -178,7 +180,7 @@ const ContractVehicles = () => {
               <div className="accordion-body">
                 <img
                   className="acc-body-img"
-                  src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/GSAMAS.png?resize=768%2C768&ssl=1"
+                  src={gsa}
                   alt=""
                 />
                 <div className="acc-body-text">
@@ -319,7 +321,7 @@ const ContractVehicles = () => {
             <p className="" style={{ fontWeight: "" }}>
             Ready to optimize your programs and drive positive change? Contact us today to learn more about how our program governance and delivery services can help you achieve your goals.
             </p>
-            <img className="mb-4" src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-127.jpg?resize=1024%2C683&ssl=1" alt="" style={{width:"100%", borderRadius:"12px"}} />
+            <img className="mb-4" src={cu} alt="" style={{width:"100%", borderRadius:"12px"}} />
           </div>
           <form className="form col-lg-6 col-md-6" onSubmit={handleSubmit}>
             <label style={{ fontWeight: "600" }} htmlFor="">

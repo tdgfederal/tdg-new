@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Case.css";
 import cs1 from "../../assets/images/cs1.jpg";
 import cs2 from "../../assets/images/cs2.jpg";
+import cs3 from "../../assets/images/cs3.webp";
 
 const Case1 = () => {
   const [formData, setFormData] = useState({
@@ -216,7 +217,7 @@ const Case1 = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-129-copy.jpg?fit=1024%2C1024&ssl=1"
+              src={cs1}
               alt=""
               style={{ transform: "scaleX(-1)", borderRadius: "0" }}
             />
@@ -322,7 +323,7 @@ const Case1 = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/12/untitled-130-copy.jpg?w=800"
+              src={cs3}
               alt=""
               style={{ transform: "scaleX(-1)", borderRadius: "0" }}
             />

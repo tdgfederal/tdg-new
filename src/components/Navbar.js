@@ -4,6 +4,7 @@ import logo from "../assets/images/logoNew.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import Contact from "../pages/Contact";
+import ln from "../assets/images/ln.webp";
 
 const Navbar = () => {
   const [cont, setCont] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
         <div className="navbar-col">
           <div className="nav-top-col d-flex align-items-center my-3">
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/TDG-logo-dark.png?w=924&ssl=1"
+              src={ln}
               height={130}
               style={{
                 marginRight: "-33px",

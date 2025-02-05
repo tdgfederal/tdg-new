@@ -7,6 +7,8 @@ import l4 from "../assets/images/4.png";
 import l5 from "../assets/images/5.png";
 import l6 from "../assets/images/6.png";
 import whi from "../assets/images/whi.png";
+import wcu from "../assets/images/wcu.webp";
+import cu from "../assets/images/cu.webp";
 
 const ProgramProjectManagement = () => {
   const services = [
@@ -226,7 +228,7 @@ const ProgramProjectManagement = () => {
             style={{ borderRadius: "12px" }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-126.jpg?w=653"
+              src={wcu}
               alt=""
             />
           </div>
@@ -247,7 +249,7 @@ const ProgramProjectManagement = () => {
             </p>
             <img
               className="mb-4"
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-127.jpg?resize=1024%2C683&ssl=1"
+              src={cu}
               alt=""
               style={{ width: "100%", borderRadius: "12px" }}
             />

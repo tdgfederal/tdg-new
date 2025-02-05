@@ -7,6 +7,8 @@ import iso from "../assets/images/ISO-9001.png";
 import pmp from "../assets/images/PMP.png";
 import safe from "../assets/images/SAFe.png";
 import cloud from "../assets/images/Certified-Cloud-1.png";
+import lr from "../assets/images/lr.webp";
+import wu from "../assets/images/wu.webp";
 
 const WhyUs = () => {
     const handleClick = () => {
@@ -43,8 +45,7 @@ const WhyUs = () => {
         "We believe in doing business responsibly. Our commitment to ethical and sustainable practices ensures that our solutions contribute to a better future.",
     },
   ];
-  const imageUrl =
-    "https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/Case-study-1.png?fit=399%2C496";
+  const imageUrl = lr;
   return (
     <div>
       <div className="industries">
@@ -54,7 +55,7 @@ const WhyUs = () => {
           </h1>
           <img
             className="img-c1"
-            src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/5g-global-connect-background-fingertip-with-woman-rsquo-s-hand-smart-technology-digital-remix.png?w=1374"
+            src={wu}
             alt=""
           />
           <div className="cont-c1" style={{ marginTop: "85px" }}>

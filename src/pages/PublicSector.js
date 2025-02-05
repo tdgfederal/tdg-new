@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import ps from "../assets/images/Public-Sector.png";
 import ea from "../assets/images/8aCertified.png";
 import swam from "../assets/images/swam-1-1.png";
+import gsa from "../assets/images/gsa.webp";
 const PublicSector = () => {
   const nav = useNavigate();
   return (
@@ -192,7 +193,7 @@ const PublicSector = () => {
               alt=""
             />
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/GSAMAS-1.png?fit=244%2C214"
+              src={gsa}
               height={180}
               alt=""
             />

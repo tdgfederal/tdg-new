@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import "../assets/styles/DownloadCapabilities.css";
 import file from "../assets/TDG Capability Statement v1.pdf";
+import cu from "../assets/images/cu.webp";
+import du from "../assets/images/du.webp";
 
 const DownloadCapabilities = () => {
   const handleClick = () => {
@@ -60,7 +62,7 @@ const DownloadCapabilities = () => {
             }}
           >
             <img
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/cloud-system-tablet-background-smart-technology-remixed-media-1.png?w=609"
+              src={du}
               alt=""
             />
           </div>
@@ -105,7 +107,7 @@ const DownloadCapabilities = () => {
             </p>
             <img
               className="mb-4"
-              src="https://i0.wp.com/www.thediallogroupllc.com/wp-content/uploads/2024/11/untitled-127.jpg?resize=1024%2C683&ssl=1"
+              src={cu}
               alt=""
               style={{ width: "100%", borderRadius: "12px" }}
             />
