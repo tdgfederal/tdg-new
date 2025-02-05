@@ -68,7 +68,7 @@ const ContactUs = () => {
               <HiOutlineBriefcase style={{fontSize:"2rem", marginBottom:"30px"}} />
               <p>Business Dev</p>
               <a href="mailto:bd@thediallogroupllc.com">
-                bd@thediallogroupllc.com
+                info@thediallogroupllc.com
               </a>
             </div>
           </div>
