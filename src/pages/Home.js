@@ -275,9 +275,9 @@ const Home = () => {
           {blog.map((e, i) => (
             <div className="col-lg-4 col-md-6 mx-auto" key={i}>
               <div className="each-blog" style={{ height: "100%" }}>
-                <h4>{e.title}</h4>
+                <h4 style={{height:"120px"}}>{e.title}</h4>
                 <img src={e.image} alt="" />
-                <p>{e.description.slice(0, 159)}...</p>
+                <p style={{height:"140px"}}>{e.description.slice(0, 159)}...</p>
                 <Link to={"/blog-details"} state={{ blogDetails: e }}>
                   <button>Read More</button>
                 </Link>
