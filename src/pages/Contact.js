@@ -33,7 +33,7 @@ const Contact = ({setCont}) => {
       );
       const data = await response.json();
       if (data.success) {
-        alert("Form Successfully Submitted!");
+        alert("Thank you for reaching out!");
         window.location.reload();
       }
     } catch (error) {
@@ -87,7 +87,7 @@ const Contact = ({setCont}) => {
         <button className="sl-inner-btn-form">Submit</button>
         <div className="my-5" style={{border:"1px solid grey", width:"100%", padding:"0"}}></div>
         <div>
-            <p className="fw-bold text-center">The Diallo Group, LLC</p>
+            <p className="fw-bold text-center">The Diallo Group</p>
             <div className="contact-last-form" style={{display:"flex", alignItems:"center", justifyContent:"space-around", flexWrap:"wrap"}}>
                 <div style={{display:"flex", alignItems:"center", justifyContent:"center", gap:"5px"}}>
                     <LuPhone/>
@@ -97,11 +97,7 @@ const Contact = ({setCont}) => {
                     <GrMailOption/>
                     <a href="mailto:info@thediallogroupllc.com">info@thediallogroupllc.com</a>
                 </div>
-                <div style={{display:"flex", alignItems:"center", justifyContent:"center", gap:"5px"}}>
-                    <HiOutlineBriefcase/>
-                    <a href="mailto:bd@thediallogroupllc.com">bd@thediallogroupllc.com</a>
-                </div>
-            </div>
+              </div>
         </div>
       </form>
     </div>
